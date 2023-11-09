@@ -2,9 +2,9 @@
 <!-- !DOCTYPE html tells browser this is using HTML5 -->
 <!-- EXAMPLE CODE HEADER/DISCLAIMER
  
-Project:  Project1-About Me
+Project:  Project3
 Name: Ethan Aure
-Submitted: 8/28/23
+Submitted: 11/8/23
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -12,201 +12,130 @@ code from any other source, providing source code to another student,
 or leaving my code on a public web site constitutes cheating.
 I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class. -->
-<html style="font-family: Georgia;">
-    <head>
-        <title>
-            Ethan's Webpage
-        </title>
-        <style>
-            /* body {
-                background-image: url(leafs.jpg);
-                background-repeat: repeat;
-            } */
-            body {
-                background-image: url(top-header.avif);
-                background-repeat: repeat-x ;
-            }
-            td {
-                border: 1px solid rgb(0, 0, 0);
-                padding: 3px;
-                text-align: center;
-            }
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            .indented {
-                margin-left: 50px;
-            }
-            .image_container {
-                float: left;
-                margin: 0 0 0 0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1 style="font-family: Tahoma;"> About Ethan</h1>
-        <img src="IMG_2498.jpg" alt="Picture of Ethan"
-        style="width: 500px;height: 375px;">
-        <h2 > Personal Info </h2>
-            <p>
-                <ul>
-                    <li>Software Engineering</li>
-                    <li>Stansbury High School, 2017</li>
-                    <li>Currently a Junior at UVU</li>
-                    <li>Probably Moose Tracks... So good</li>
-                </ul>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>My webpage</title>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- my header section contains the needed code for my header -->
+        <header class="header">
+            <div  class="headerTitle"><img src="uvu.jpg" alt="pic of house" class="uvu"></div>
+            <p>Welcome to my webpage</p>
+            <div  class="headerTitle"><img src="uvu.jpg" alt="pic of house" class="uvu2"></div>
+        </header>
+        <nav class="menu">
+            <button onclick="changePage(1)">Home</button>
+            <!-- <button onclick="changePage(2)">Favorite</button>  -->
+            <button onclick="changePage(3)">Photography</button>
+            <button onclick="changePage(4)">Contact Me</button>
+        </nav>
+        <section1 class="main display" id="main">
+            <h1>Home</h1>
+            <p>Here is a little bit about me. I enjoy riding my motorcycle,
+                playing video games, spending time in the mountains, and 
+                much more, I am studying software engineering at Utah Valley University
+                and love spending time with friends.
             </p>
-        </h2>
-        <h2> My Favorite Books </h2>
-            <p>
-                <ol>
-                    <li> <i>Jesus the Christ</i> - <a href="https://en.wikipedia.org/wiki/James_E._Talmage" target="_blank">James E. Talmage</a></li>
-                    <li> <i>Legend</i> - <a href="https://marielu.com/" target="_blank">Marie Lu</a></li>
-                    <li> <i>What if?</i> - <a href="https://en.wikipedia.org/wiki/Randall_Munroe" target="_blank">Randall Munroe</a></li>
-                    <li> <i>Worth the Wrestle</i> - <a href="https://en.wikipedia.org/wiki/Sheri_L._Dew" target="_blank">Sheri L. Dew</a></li>
-                    <li> <i>Lord of the Rings</i> - <a href="https://en.wikipedia.org/wiki/J._R._R._Tolkien" target="_blank">John Ronald Reuel Tolkien</a></li>
-                </ol>
-                </p>
-        <h2>My Wonderful Bucket</h2>
-                <div class="indented">I once found a wonderful bucket, 
-                    <br>but sadly my mother said "chuck it", 
-                    <br>I begrudgingly said fine, 
-                    <br>though the bucket was mine, 
-                    <br>and now I lost my beautiful bucket.
-                </div>
-        <h2>My Personal Interests</h2>
-                <!-- <div class="image_container"><img src="URUE2079.PNG" alt="Picture of motorcycle"
-                    style="width: 300px;height: 225px;">
-                </div> -->
-                <p> One thing I have recently got into is motorcycles. 
-                    <br>I have always been interested in them 
-                    <br>but very recently, I was able to get one myself. 
-                    <br>This is a picture of what it look like.
-                    <br><img src="URUE2079.PNG" alt="Picture of motorcycle"
-                    style="width: 300px;height: 225px;">
-                    
-                </p>
-                <p> One more thing about me is that I love the outdoors. 
-                    <br>I am a very big fan of camping, backpacking, hiking, 
-                    <br> and anything on the water. Nature has always been a big part of my life.
-                    <br>I like to spend time there just to unwind and get my grasp on things again.
-                </p>
-        <!-- The following chunk of code will handle the Schedule -->
-        <h2>Class Schedule</h2>
-                <table border="1" class="equal">
-                    <tr>
-                        <td></td>
-                        <td >Monday</td>
-                        <td>Tuesday</td>
-                        <td>Wednesday</td>
-                        <td>Thursday</td>
-                        <td>Friday</td>
-                    </tr>
-                    <tr>
-                        <td>7:00</td>
-                        <td  rowspan="10" style="background-color: rgb(166, 128, 45)"> Work</td>
-                        <td rowspan="6" style="background-color: rgb(110, 126, 211)">Get Ready/<br></br>Work out</td>
-                        <td  rowspan="10" style="background-color: rgb(166, 128, 45)"> Work</td>
-                        <td rowspan="6" style="background-color: rgb(110, 126, 211)">Get Ready/<br></br>Work out</td>
-                        <td  rowspan="10" style="background-color: rgb(166, 128, 45)"> Work</td>
-                    </tr>
-                    <tr>
-                        <td>7:30</td>
-                    </tr>
-                    <tr>
-                        <td>8:00</td>
-                    </tr>
-                    <tr>
-                        <td>8:30</td>
-                    </tr>
-                    <tr>
-                        <td>9:00</td>
-                    </tr>
-                    <tr>
-                        <td>9:30</td>
-                    </tr>
-                    <tr>
-                        <td>10:00</td>
-                        <td rowspan="3" style="background-color: green;">CS-2550</td>
-                        <td rowspan="3" style="background-color: green;">CS-2550</td>
-                    </tr>
-                    <tr>
-                        <td>10:30</td>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                    </tr>
-                    <tr>
-                        <td>11:30</td>
-                        <td rowspan="3" style="background-color: rgb(106, 46, 82)">Break</td>
-                        <td rowspan="3" style="background-color: rgb(106, 46, 82)">Break</td>
-                    </tr>
-                    <tr>
-                        <td>12:00</td>
-                        <td rowspan="2" style="background-color: rgb(123, 199, 151)">Lunch</td>
-                        <td rowspan="2" style="background-color: rgb(123, 199, 151)">Lunch</td>
-                        <td rowspan="2" style="background-color: rgb(123, 199, 151)">Lunch</td>
-                    </tr>
-                    <tr>
-                        <td>12:30</td>
-                    </tr>
-                    <tr>
-                        <td>1:00</td>
-                        <td rowspan="6" style="background-color: rgb(166, 128, 45)">Work</td>
-                        <td rowspan="3" style="background-color: rgb(210, 0, 0);">CS-2600</td>
-                        <td rowspan="6" style="background-color: rgb(166, 128, 45)">Work</td>
-                        <td rowspan="3" style="background-color: rgb(210, 0, 0);">CS-2600</td>
-                        <td rowspan="6" style="background-color: rgb(166, 128, 45)">Work</td>
-                    </tr>
-                    <tr>
-                        <td>1:30</td>
-                    </tr>
-                    <tr>
-                        <td>2:00</td>
-                    </tr>
-                    <tr>
-                        <td>2:30</td>
-                        <td rowspan="3" style="background-color: rgb(71, 71, 71);">ASTR-1040</td>
-                        <td rowspan="3" style="background-color: rgb(71, 71, 71);">ASTR-1040</td>
-                    </tr>
-                    <tr>
-                        <td>3:00</td>
-                    </tr>
-                    <tr>
-                        <td>3:30</td>
-                    </tr>
+            <p>Just below are some of my favorite things. But feel free to explore the other 
+                tabs on my site and learn a little bit more about me and things I like. </p>
+            <div class="home-container">
+                <ul>
+                    <li>Spending time in the mountains</li><br>
+                    <li>Playing video games with friends</li><br>
+                    <li>Watching movies</li><br>
+                    <li>Riding my motorcycle</li><br>
+                    <li>Skiing in the winter</li><br>
+                    <li>Spending lots of time with friends</li><br>
+                    <li>Doing some photography</li><br>
+                </ul>
 
-                </table>
-        <h3>--SELF GRADE--</h3>
-            <pre>
-                HEADER                      A
-                PERSONAL INFO               A
-                FAVE BOOKS                  A
-                HAIKU                       A
-                ESSAY                       A
-                SCHEDULE                    A
-
-                --EXTRA ITEMS COMPLETED--Minimum of 5
-                REPEATING BKG IMG (2pts)            YES
-                
-                CHANGE FONT (2pts)                  YES
-
-                RT ALIGN PHOTO (2pts)               NO
-
-                INDENT/CENTER HAIKU (2pts)          YES
-
-                TABLE-TEXT ALIGN (2pts)             YES
-
-                TABLE-COLOR CODE (2pts)             YES
-
-                TABLE-EQUAL COL WIDTH (2pts)        NO
-
-                ADDITIONAL COMMENTS:
-                NONE
-            </pre>
-    </body>
-    
+                <p>Also, here is a video that I have always loved...</p>
+                <div><a href="https://www.youtube.com/watch?v=nGeKSiCQkPw">Ultimate Dog Tease</a></div>
+            </div>
+            <img src="IMG_2498.jpg" alt="Picture of Ethan" class="ethan">
+        </section1>
+        <section class="favorite hide" id="favorite">
+            <h1>Some of my Favorite Things</h1>
+            <div>This page is under construction</div>
+        </section>
+        <section class="photography hide" id="photography">
+            <h1>Photography</h1>
+            <p>This semester in school I am taking a photography class. I have had the opputunity 
+                to take a lot of cool ppictures and there are some that I am proud of that I will share here.</p>
+            <figure>
+                <div><img src="reflected-river-7.jpg" alt="river pic" id="river"></div>
+                <figcaption>A tree being reflected off the water</figcaption>
+                <div><img src="pumpkins.jpg" alt="pumpkins" id="pumpkins"></div>
+                <figcaption>A pile of pumpkins behind a motorcycle</figcaption>
+                <div><img src="bike-at-stoplight.jpg" alt="bike-at-stoplight" id="bikeAtLight"></div>
+                <figcaption>A 1st person view of a stoplight from a motorcycle</figcaption>
+                <div><img src="boats.jpg" alt="A bunch of boats" id="boat"></div>
+                <figcaption>Man fishing in a lake</figcaption>
+            </figure>
+        </section>
+        <section class="contact hide" id="contact">
+            <h1>Contact Me</h1>
+            <p>If you have need to contact me please do so through canvas. <br>
+                I will also provide all my other (fake) contact information below. </p>
+            <p>Address: 42 Wallaby Way, Sydney, Australia</p>
+            <p>Email: JohnDoe@email.com</p>
+            <p>Phone Number: 123-456-7890</p>
+            <divCarGif><iframe src="https://giphy.com/embed/WUHPlp89IfsF1zZdpK" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></divCarGif>
+            <divDog><iframe src="https://giphy.com/embed/gfl7CKcgs6exW"frameBorder="0" class="giphy-embed" allowFullScreen></iframe></divDog>
+        </section>
+        <footer class="footer">
+            <p>This website was created by Ethan Aure for the CS 2550 class at UVU</p>
+        </footer>
+    </div>
+    <script>
+        // in my script is all the code for changing my page depending on what button you press
+        function changePage(page) {
+            var element = null;
+            switch(page) {
+                case 1:
+                    document.getElementById("main").classList.add("display");   //<section class="main display" id="main">
+                    document.getElementById("main").classList.remove("hide");
+                    document.getElementById("favorite").classList.add("hide");
+                    document.getElementById("favorite").classList.remove("display");
+                    document.getElementById("photography").classList.add("hide");
+                    document.getElementById("photography").classList.remove("display");
+                    document.getElementById("contact").classList.add("hide");
+                    document.getElementById("contact").classList.remove("display");
+                    break
+                case 2:
+                    document.getElementById("main").classList.add("hide");
+                    document.getElementById("main").classList.remove("display");
+                    document.getElementById("favorite").classList.add("display");
+                    document.getElementById("favorite").classList.remove("hide");
+                    document.getElementById("photography").classList.add("hide");
+                    document.getElementById("photography").classList.remove("display");
+                    document.getElementById("contact").classList.add("hide");
+                    document.getElementById("contact").classList.remove("display");
+                    break
+                case 3:
+                    document.getElementById("main").classList.add("hide");
+                    document.getElementById("main").classList.remove("display");
+                    document.getElementById("favorite").classList.add("hide");
+                    document.getElementById("favorite").classList.remove("display");
+                    document.getElementById("photography").classList.add("display");
+                    document.getElementById("photography").classList.remove("hide");
+                    document.getElementById("contact").classList.add("hide");
+                    document.getElementById("contact").classList.remove("display");
+                    break
+                case 4:
+                    document.getElementById("main").classList.add("hide");
+                    document.getElementById("main").classList.remove("display");
+                    document.getElementById("favorite").classList.add("hide");
+                    document.getElementById("favorite").classList.remove("display");
+                    document.getElementById("photography").classList.add("hide");
+                    document.getElementById("photography").classList.remove("display");
+                    document.getElementById("contact").classList.add("display");
+                    document.getElementById("contact").classList.remove("hide");
+                    break
+            }
+        }
+    </script>
+</body>
 </html>
